@@ -23,12 +23,10 @@ export default function reducer(prevState, {action, payload}) {
         ...prevState,
         favoriteBooks: newFavBooks
       }
-    case REMOVE_BOOK:
-      newFavBooks = favoriteBooks.filter(book => book.id != payload)
-      saveToLocalStorage(newFavBooks);
+    case SEARCH_BOOKS:
       return {
         ...prevState,
-        favoriteBooks: newFavBooks
+        bookSearchResults: payload
       };
     default:
       return prevState
