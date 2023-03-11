@@ -25,7 +25,7 @@ export default function Book() {
   
     // Remove book from favorites
     const removeFromFavorites = () => {
-      dispatch({action: REMOVE_BOOK, payload: bookID})
+      dispatch({action: REMOVE_BOOK, payload: book.id})
     }
 
   return (
